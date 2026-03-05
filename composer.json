@@ -1,0 +1,7 @@
+{
+    "require": {
+        "symfony/asset-mapper": "^6.4",
+        "symfony/asset": "^6.4",
+        "symfony/twig-pack": "^1.0"
+    }
+}

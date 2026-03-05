@@ -1,0 +1,20 @@
+services:
+  symfony:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      no_cache: true
+      args:
+        USERNAME: o22509821
+        USERID: 1047303864
+        EMAIL: samy.azzi@etu.univ-orleans.fr
+    container_name: fw2-symfonyy
+    command: /bin/bash
+    tty: true
+    stdin_open: true
+    volumes:
+    - ./dev:/var/html/www
+    ports:
+    - 8080:8000
+    environment:
+      PS1: "[ $$(whoami) | \\w ] "
