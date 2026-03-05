@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gestion des cours{% endblock %}</title>
+    {% block stylesheets %}
+    {% endblock %}
+</head>
+<body>
+    {# Barre de navigation #}
+    <nav style="background-color: #333; padding: 1rem; margin-bottom: 2rem;">
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 2rem;">
+            <li>
+                <a href="{{ path('app_accueil') }}" style="color: white; text-decoration: none;">
+                    Accueil
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('app_cours_index') }}" style="color: white; text-decoration: none;">
+                    Tous les cours
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('app_cours_new') }}" style="color: white; text-decoration: none;">
+                    Créer un cours
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    {# Contenu principal #}
+    <div style="padding: 0 2rem;">
+        {% block body %}{% endblock %}
+    </div>
+
+    {% block javascripts %}
+    {% endblock %}
+</body>
+</html>
